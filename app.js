@@ -10,7 +10,7 @@ let loadAllPokemon = async () => {
   const allPokemon = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${randomNum}`)
   const onLoadBody = document.querySelector('#load-body');
 
-  onLoadBody.innerHTML = '';
+  list.innerHTML = '';
 
   for (let pokemon of allPokemon.data.results) {
     let id
